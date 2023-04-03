@@ -1,0 +1,18 @@
+extends layout.pug
+
+block content
+    section.section.page
+        h1.title Calories Page
+
+        if calories.length
+            h2 Total calories consumed #{total}
+            ul.list
+                each calorie in calories
+                    li.list-item
+                        h2 User consumed #{calorie.food} and got #{calorie.amount} calories
+                        div
+                            button.deleteBtn(data-id= calorie.id) Delete
+
+
+        else
+            h4 No calories consumed

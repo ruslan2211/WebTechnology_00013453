@@ -1,0 +1,14 @@
+extends layout.pug
+
+block content
+    section.section.page
+        h1.title Add consumption of calorie
+
+        form.form(action="/calories/create", method="POST")
+            label Food Name
+            input.input(type="text", name="food" required="")
+
+            label Calorie amount
+            input.input(type="number", name="amount" required="")
+
+            button.input Submit
